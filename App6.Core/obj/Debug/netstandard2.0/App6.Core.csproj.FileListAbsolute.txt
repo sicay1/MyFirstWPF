@@ -1,0 +1,9 @@
+C:\Users\admin\source\repos\App6.Core\obj\Debug\netstandard2.0\App6.Core.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\App6.Core\obj\Debug\netstandard2.0\App6.Core.AssemblyInfo.cs
+C:\Users\admin\source\repos\App6.Core\bin\Debug\netstandard2.0\App6.Core.deps.json
+C:\Users\admin\source\repos\App6.Core\bin\Debug\netstandard2.0\App6.Core.dll
+C:\Users\admin\source\repos\App6.Core\bin\Debug\netstandard2.0\App6.Core.pdb
+C:\Users\admin\source\repos\App6.Core\obj\Debug\netstandard2.0\App6.Core.csprojAssemblyReference.cache
+C:\Users\admin\source\repos\App6.Core\obj\Debug\netstandard2.0\App6.Core.dll
+C:\Users\admin\source\repos\App6.Core\obj\Debug\netstandard2.0\App6.Core.pdb
+C:\Users\admin\source\repos\App6.Core\obj\Debug\netstandard2.0\App6.Core.csproj.CoreCompileInputs.cache

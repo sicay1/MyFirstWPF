@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "dD9ABGvx8HIyBtT6juFpmDNUPd7WnAJXLOefe+r+K5FqddIwKfZwqGyi7RBck+ywB1Y6yK7kfGkj0vmXeHaJ3A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\admin\\source\\repos\\App6.Core\\App6.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.management\\4.7.0\\system.management.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
