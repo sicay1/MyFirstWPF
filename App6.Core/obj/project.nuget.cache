@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dD9ABGvx8HIyBtT6juFpmDNUPd7WnAJXLOefe+r+K5FqddIwKfZwqGyi7RBck+ywB1Y6yK7kfGkj0vmXeHaJ3A==",
+  "dgSpecHash": "fg5QF5u56PXwWzMj50dDNO67HLKGyNOepwwJB7VGVJvqMeCtq0p4Sg9IHu5WEfZjJg7ywCTsndvWJZzNYYB5wg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\source\\repos\\App6.Core\\App6.Core.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Downloads\\WPF1\\App6.Core\\App6.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

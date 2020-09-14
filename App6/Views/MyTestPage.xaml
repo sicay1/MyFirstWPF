@@ -10,153 +10,77 @@
       Title="MyTestPage">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Border Padding="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="1*"  MinWidth="150" MaxWidth="250"/>
+                    <ColumnDefinition Width="5" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <DockPanel Margin="5" Grid.Column="0"  Grid.Row="0" Grid.RowSpan="2">
+                    <TextBlock DockPanel.Dock="Top" VerticalAlignment="Center" Text="Layout Name:" FontSize="{StaticResource LargeFontSize}"/>
+                    <ListView DockPanel.Dock="Top" BorderThickness=" .4" Height="Auto">
+                        <ListViewItem>eeee</ListViewItem>
+                        <ListViewItem>eeee</ListViewItem>
+                        <ListViewItem>eeee</ListViewItem>
+                        <ListViewItem>eeee</ListViewItem>
+                    </ListView>
+                </DockPanel>
 
-            <StackPanel>
-                <!-- 3 buttons -->
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Margin="5" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" >
+                    <TextBlock Text="Window:" Margin="0 0 10 0" FontSize="{StaticResource LargeFontSize}"></TextBlock>
+                    <ComboBox 
+                        Width="400"
+                        x:Name="TextProcessCbx" 
+                        ItemsSource="{Binding Path=SampleItems}" 
+                        SelectedItem="{Binding Path=Selected}"
+                        DisplayMemberPath="MainWindowTitle" />
 
-                    <Button Margin="0 0 10 0" Grid.Column="0" Content="Apply" Background="Azure" />
-                    <Button Grid.Column="1" Content="Reset" />
-                    <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh"/>
-                </Grid>
-                
-                <!--Style="{StaticResource PageTitleStyle}"-->
-                <!--Style="{StaticResource SubtitleTextStyle}"-->
-                
-                <!--#region Pulse Properties Area -->
-                <TextBlock 
-                    Text="Pulse Properties" 
-                    Style="{StaticResource SubtitleTextStyle}" 
-                    Margin="0 20 0 10" />
 
-                <!-- Description -->
-                <TextBlock Text="Description" />
-                <TextBox Padding="2" />
+                </StackPanel>
 
-                <!-- Status and Revision -->
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Margin="0 10 10 0" Grid.Column="0">
-                        <TextBlock Text="Status" />
-                        <TextBox Padding="2" />
+
+                <DockPanel  Margin="5" Grid.Column="1" Grid.Row="1">
+                    <TextBlock DockPanel.Dock="Top" Text="Steps" FontSize="{StaticResource MediumFontSize}"/>
+                    <DataGrid DockPanel.Dock="Top" BorderThickness="0.4" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn>
+                                <DataGridTextColumn.Header>No</DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn>
+                                <DataGridTextColumn.Header>Action</DataGridTextColumn.Header>
+                            </DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+
+                <GridSplitter Grid.Column="2" Grid.Row="1"></GridSplitter>
+                <StackPanel  Margin="5 5 5 5" Grid.Column="3" Grid.Row="1">
+                    <StackPanel Orientation="Horizontal" Margin="5 0 0 10">
+                        <TextBlock Text="Windows Rectangle:" Margin="0 0 5 0" FontSize="{StaticResource MediumFontSize}"/>
+                        <TextBlock Text="{Binding TxtCbx}"  FontSize="{StaticResource MediumFontSize}"/>
+                        
                     </StackPanel>
-
-                    <StackPanel Margin="10 10 0 0" Grid.Column="1">
-                        <TextBlock Text="Revision" />
-                        <TextBox Padding="2" />
+                    <StackPanel Orientation="Horizontal" Margin="5 0 0 5">
+                        <TextBlock Text="Action:" Margin="0 0 5 0" VerticalAlignment="Center" FontSize="{StaticResource MediumFontSize}" />
+                        <ComboBox Width="200" SelectedItem="{Binding ClickedActionBtn}">
+                            <ComboBoxItem>Left Click</ComboBoxItem>
+                            <ComboBoxItem>Right Click</ComboBoxItem>
+                            <ComboBoxItem>Double Left Click</ComboBoxItem>
+                        </ComboBox>
+                        
                     </StackPanel>
-                </Grid>
-                <!--#endregion-->
+                    <!--<local:ClickUserControl Margin="10" Title="Enter title:" MaxLength="40" Height="50" />-->
+                    <StackPanel x:Name="emtpyStack" HorizontalAlignment="Center" Width="100"/>
+                    <!--<StackPanel Name="emtpyStack"></StackPanel>-->
+                </StackPanel>
 
-                <!--#region teeee -->
-                <TextBlock 
-                    Margin="0 20 0 0" 
-                    Style="{StaticResource SubtitleTextStyle}" 
-                    Text="Raw Material" />
+            </Grid>
 
-                <TextBlock Margin="0 10 0 0" Text="Material" />
-                <ComboBox 
-                    x:Name="TextProcessCbx" 
-                    ItemsSource="{Binding Path=SampleItems}" 
-                    SelectedItem="{Binding Path=Selected}"
-                    DisplayMemberPath="MainWindowTitle"  
-                    />
-                <TextBlock Margin="0 5 0 0" Text="process name:" />
-                <TextBox Text="{Binding TxtCbx, Mode=TwoWay}"/>
-                <!--#endregion-->
-
-                <!--#region Manufacturing Information area -->
-                <TextBlock 
-                    Margin="0 20 0 0" 
-                    Text="Manufacturing Information" 
-                    Style="{StaticResource SubtitleTextStyle}" />
-                <TextBlock Margin="0 10 0 0" Text="Work Centers" />
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0" Margin="0 5 0 0">
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Weld" />
-                        </StackPanel>
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Assembly" />
-                        </StackPanel>
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Plasma" />
-                        </StackPanel>
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Laser" />
-                        </StackPanel>
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Purchase" />
-                        </StackPanel>
-                    </StackPanel>
-
-                    <StackPanel Grid.Column="1" Margin="0 5 0 0">
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Lathe" />
-                        </StackPanel>
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Drill" />
-                        </StackPanel>
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Fold" />
-                        </StackPanel>
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Roll" />
-                        </StackPanel>
-                        <StackPanel Margin="0 2 0 0" Orientation="Horizontal">
-                            <CheckBox />
-                            <TextBlock Text="Saw" />
-                        </StackPanel>
-                    </StackPanel>
-                </Grid>
-
-                <TextBlock Margin="0 10 0 0" Text="Length" />
-                <TextBox Padding="2" />
-
-                <TextBlock Margin="0 10 0 0" Text="Mass" />
-                <ComboBox />
-
-                <TextBlock Margin="0 10 0 0" Text="Finish" />
-                <ComboBox />
-
-                <TextBlock Margin="0 10 0 0" Text="Purchase Information" />
-                <ComboBox />
-
-                <TextBlock Margin="0 10 0 0" Text="Supplier Name" />
-                <TextBox Padding="2" />
-
-                <TextBlock 
-                    Margin="0 20 0 0" 
-                    Text="Additional Information" 
-                    Style="{StaticResource SubtitleTextStyle}" />
-
-                <TextBlock Margin="0 10 0 0" Text="Note" />
-                <TextBox Padding="2" />
-                <!--#endregion-->
-
-
-            </StackPanel>
 
 
         </Border>

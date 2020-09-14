@@ -14,21 +14,20 @@ using System.Windows.Shapes;
 
 namespace App6.Views
 {
+    
     /// <summary>
-    /// Interaction logic for MyTestPage.xaml
+    /// Interaction logic for UC_Click.xaml
     /// </summary>
-    public partial class MyTestPage : Page
+    public partial class ClickUserControl : UserControl
     {
-        public MyTestPage(MyTestViewModel viewModel)
+        public string Title { get; set; }
+
+        public int MaxLength { get; set; }
+
+        public ClickUserControl()
         {
             InitializeComponent();
-            DataContext = viewModel;
-
-            Button btn1 = new Button();
-            btn1.Content = "SET";
-
-            emtpyStack.Children.Add(btn1);
+            this.DataContext = this;
         }
-
     }
 }

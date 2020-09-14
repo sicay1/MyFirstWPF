@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\source\\repos\\App6.Core\\App6.Core.csproj": {}
+    "C:\\Users\\admin\\Downloads\\WPF1\\App6.Core\\App6.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\source\\repos\\App6.Core\\App6.Core.csproj": {
+    "C:\\Users\\admin\\Downloads\\WPF1\\App6.Core\\App6.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\App6.Core\\App6.Core.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Downloads\\WPF1\\App6.Core\\App6.Core.csproj",
         "projectName": "App6.Core",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\App6.Core\\App6.Core.csproj",
+        "projectPath": "C:\\Users\\admin\\Downloads\\WPF1\\App6.Core\\App6.Core.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\App6.Core\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Downloads\\WPF1\\App6.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

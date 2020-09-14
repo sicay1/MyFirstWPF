@@ -17,18 +17,8 @@ namespace App6.ViewModels
 {
     public class MyTestViewModel : Observable, INavigationAware
     {
-        private Process _selected;
-        //private string _TxtCbx = "";
+        
         private string _TxtCbx;
-        //public string TxtCbx
-        //{
-        //    get { return _TxtCbx; }
-        //    set
-        //    {
-        //        Set(ref _TxtCbx, value);
-        //    }
-        //}
-
         public string TxtCbx
         {
             get { return _TxtCbx; }
@@ -38,22 +28,78 @@ namespace App6.ViewModels
             }
         }
 
+        private Process _selected;
         public Process Selected
         {
             get { return _selected; }
             set 
             {
+                
                 //MessageBox.Show("ssss:" + value);
                 RECT rec = new RECT();
+                //RECT rec2 = new RECT();
+                WINDOWPLACEMENT winpla = new WINDOWPLACEMENT();
                 var hh = GetClientRect(value.MainWindowHandle, ref rec);
-                TxtCbx = $"left:{rec.Left} top:{rec.Top} right:{rec.Right} bottom:{rec.Bottom}";
+                var ClientRecW = rec.Right - rec.Left;
+                var ClientRecH = rec.Bottom - rec.Top;
+                //var jj = GetWindowRect(value.MainWindowHandle, ref rec2);
+                //var MaximizedRecW = rec2.Right - rec2.Left;
+                //var MaximizedRecH = rec2.Bottom - rec2.Top;
+                var gg = GetWindowPlacement(value.MainWindowHandle, out winpla);
+                //var WinPlaceRecW = winpla.Right - rec3.Left;
+                //var WinPlaceRecH = rec3.Bottom - rec3.Top;
+                TxtCbx = $"left:{rec.Left} top:{rec.Top} right:{rec.Right} bottom:{rec.Bottom} W:{ClientRecW} H:{ClientRecH}";
                 Set(ref _selected, value); 
             }
         }
 
+
+        enum windowState
+        {
+            SW_HIDE,
+            SW_SHOWNORMAL,
+            SW_SHOWMINIMIZED,
+            SW_SHOWMAXIMIZED
+        }
+
+        //const int SW_HIDE = 0;
+        //const int SW_SHOWNORMAL = 1;
+        //const int SW_SHOWMINIMIZED = 2;
+        //const int SW_SHOWMAXIMIZED = 3;
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        static extern bool GetWindowPlacement(IntPtr hWnd, out WINDOWPLACEMENT lpwndpl);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        static extern bool SetWindowPlacement(IntPtr hWnd, [In] ref WINDOWPLACEMENT lpwndpl);
+
+
+        [StructLayout(LayoutKind.Sequential)]
+        struct WINDOWPLACEMENT
+        {
+            public int length;
+            public int flags;
+            public windowState showCmd;
+            public Point ptMinPosition;
+            public Point ptMaxPosition;
+            public RECT rcNormalPosition;
+        }
+
+
+        /// <summary>
+        /// client rect does not include title bar, borders, scroll bars, status bar...client rect does not include title bar, borders, scroll bars, status bar...
+        /// </summary>
+        /// <param name="hWnd"></param>
+        /// <param name="lpRect"></param>
+        /// <returns></returns>
         [DllImport("user32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool GetClientRect(IntPtr hWnd, ref RECT lpRect);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern bool GetWindowRect(IntPtr hWnd, ref RECT lpRect);
+
+       
         [StructLayout(LayoutKind.Sequential)]
         private struct RECT
         {
@@ -73,7 +119,7 @@ namespace App6.ViewModels
         public MyTestViewModel() 
         {
 
-
+            
         }
 
 
@@ -99,7 +145,11 @@ namespace App6.ViewModels
         }
 
 
-
+        public void ClickedActionBtn()
+        {
+            Button btn1 = new Button();
+            btn1.Content = "SET";
+        }
 
     }
 
