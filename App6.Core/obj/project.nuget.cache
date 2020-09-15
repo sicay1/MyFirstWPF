@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "fg5QF5u56PXwWzMj50dDNO67HLKGyNOepwwJB7VGVJvqMeCtq0p4Sg9IHu5WEfZjJg7ywCTsndvWJZzNYYB5wg==",
+  "dgSpecHash": "yG9+kKLW/l+MyS8yOLBYPgXvqi6GoSVRhw0s7jRL313ftXUGR3XWHGNcw2ZZrB6ofNfmb+aV+Vb+8M63xPyFZw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Downloads\\WPF1\\App6.Core\\App6.Core.csproj",
+  "projectFilePath": "C:\\Users\\tony\\Documents\\MyFirstWPF\\App6.Core\\App6.Core.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
-    "C:\\Users\\admin\\.nuget\\packages\\system.management\\4.7.0\\system.management.4.7.0.nupkg.sha512"
+    "C:\\Users\\tony\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\tony\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\tony\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\tony\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
+    "C:\\Users\\tony\\.nuget\\packages\\system.management\\4.7.0\\system.management.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

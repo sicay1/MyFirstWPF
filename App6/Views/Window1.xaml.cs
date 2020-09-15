@@ -9,25 +9,20 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace App6.Views
 {
-    
     /// <summary>
-    /// Interaction logic for UC_Click.xaml
+    /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class ClickUserControl : UserControl
+    public partial class Window1 : Window
     {
-        public string Title { get; set; }
-
-        public int MaxLength { get; set; }
-
-        public ClickUserControl()
+        public Window1()
         {
             InitializeComponent();
-            this.DataContext = this;
+            Windows1ViewModel viewModel = new Windows1ViewModel();
+            DataContext = viewModel;
         }
     }
 }

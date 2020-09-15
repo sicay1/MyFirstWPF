@@ -2,6 +2,7 @@
 using App6.Core.Contracts.Services;
 using App6.Core.Services;
 using App6.Helpers;
+using MahApps.Metro.Controls.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -28,10 +29,10 @@ namespace App6.ViewModels
             }
         }
 
-        private Process _selected;
-        public Process Selected
+        private Process _selectedHandler;
+        public Process SelectedHandler
         {
-            get { return _selected; }
+            get { return _selectedHandler; }
             set 
             {
                 
@@ -49,7 +50,7 @@ namespace App6.ViewModels
                 //var WinPlaceRecW = winpla.Right - rec3.Left;
                 //var WinPlaceRecH = rec3.Bottom - rec3.Top;
                 TxtCbx = $"left:{rec.Left} top:{rec.Top} right:{rec.Right} bottom:{rec.Bottom} W:{ClientRecW} H:{ClientRecH}";
-                Set(ref _selected, value); 
+                Set(ref _selectedHandler, value); 
             }
         }
 
@@ -115,11 +116,12 @@ namespace App6.ViewModels
         public MyTestViewModel(IGetProcessService sampleGetProcesService)
         {
             _sampleGetProcesService = sampleGetProcesService;
+            
         }
         public MyTestViewModel() 
         {
+            _SelectedAction = SelectedAction;
 
-            
         }
 
 
@@ -136,7 +138,7 @@ namespace App6.ViewModels
 
             if (SampleItems != null)
             {
-                Selected = SampleItems.First();
+                SelectedHandler = SampleItems.First();
             }
         }
 
@@ -149,6 +151,22 @@ namespace App6.ViewModels
         {
             Button btn1 = new Button();
             btn1.Content = "SET";
+        }
+
+
+        private string _SelectedAction;
+
+        public string SelectedAction
+        {
+            get { return _SelectedAction; }
+            set 
+            {
+                if (value == "Left Click")
+                {
+                    MessageBox.Show(value);
+                }
+                _SelectedAction = value; 
+            }
         }
 
     }

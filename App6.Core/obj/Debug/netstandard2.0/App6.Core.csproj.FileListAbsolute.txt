@@ -16,3 +16,12 @@ C:\Users\admin\Downloads\WPF1\App6.Core\obj\Debug\netstandard2.0\App6.Core.Assem
 C:\Users\admin\Downloads\WPF1\App6.Core\obj\Debug\netstandard2.0\App6.Core.csproj.CoreCompileInputs.cache
 C:\Users\admin\Downloads\WPF1\App6.Core\obj\Debug\netstandard2.0\App6.Core.dll
 C:\Users\admin\Downloads\WPF1\App6.Core\obj\Debug\netstandard2.0\App6.Core.pdb
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\bin\Debug\netstandard2.0\App6.Core.deps.json
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\bin\Debug\netstandard2.0\App6.Core.dll
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\bin\Debug\netstandard2.0\App6.Core.pdb
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\obj\Debug\netstandard2.0\App6.Core.csprojAssemblyReference.cache
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\obj\Debug\netstandard2.0\App6.Core.AssemblyInfoInputs.cache
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\obj\Debug\netstandard2.0\App6.Core.AssemblyInfo.cs
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\obj\Debug\netstandard2.0\App6.Core.csproj.CoreCompileInputs.cache
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\obj\Debug\netstandard2.0\App6.Core.dll
+C:\Users\tony\Documents\MyFirstWPF\App6.Core\obj\Debug\netstandard2.0\App6.Core.pdb

@@ -67,15 +67,18 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="5 0 0 5">
                         <TextBlock Text="Action:" Margin="0 0 5 0" VerticalAlignment="Center" FontSize="{StaticResource MediumFontSize}" />
-                        <ComboBox Width="200" SelectedItem="{Binding ClickedActionBtn}">
+                        <ComboBox Width="200"
+                                  DropDownClosed="ComboBox_DropDownClosed">
                             <ComboBoxItem>Left Click</ComboBoxItem>
                             <ComboBoxItem>Right Click</ComboBoxItem>
                             <ComboBoxItem>Double Left Click</ComboBoxItem>
                         </ComboBox>
                         
                     </StackPanel>
+
+                    <ContentControl Content="{Binding CurrentView}"></ContentControl>
                     <!--<local:ClickUserControl Margin="10" Title="Enter title:" MaxLength="40" Height="50" />-->
-                    <StackPanel x:Name="emtpyStack" HorizontalAlignment="Center" Width="100"/>
+                    <StackPanel x:Name="emptyStack" HorizontalAlignment="Center" Width="100"/>
                     <!--<StackPanel Name="emtpyStack"></StackPanel>-->
                 </StackPanel>
 

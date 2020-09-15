@@ -24,11 +24,48 @@ namespace App6.Views
             InitializeComponent();
             DataContext = viewModel;
 
-            Button btn1 = new Button();
-            btn1.Content = "SET";
 
-            emtpyStack.Children.Add(btn1);
         }
 
+        private string _lastValue = "";
+        private void ComboBox_DropDownClosed(object sender, EventArgs e)
+        {
+            var cbx = (ComboBox)sender;
+            if (cbx != null && cbx.Text != _lastValue)
+            {
+                emptyStack.Children.Clear();
+                _lastValue = cbx.Text;
+                //MessageBox.Show("aaaaaaaaaabbb");
+                Button btn1 = new Button();
+                switch (cbx.Text)
+                {
+                    case "Left Click":
+                        btn1.Content = "SET1";
+                        btn1.Click += Btn1_Click;
+                        emptyStack.Children.Add(btn1);
+                        break;
+                    case "Right Click":
+                        btn1.Content = "SET2";
+                        emptyStack.Children.Add(btn1);
+                        break;
+                    case "Double Left Click":
+                        btn1.Content = "SET3";
+                        emptyStack.Children.Add(btn1);
+                        break;
+                }
+            }
+
+
+
+
+
+        }
+
+        private void Btn1_Click(object sender, RoutedEventArgs e)
+        {
+            //throw new NotImplementedException();
+            Window1 w1 = new Window1();
+            w1.Show();
+        }
     }
 }
